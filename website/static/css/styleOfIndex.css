@@ -1,0 +1,147 @@
+/*以下为动画实现*/
+
+#cloud {
+	display: inline-block;
+	height: 15%;
+	position: absolute;
+	bottom: 25%;
+	left:13%;
+	-webkit-animation:float1 6s infinite;
+}
+
+@-webkit-keyframes float1 /* Safari and Chrome */
+{
+ 			0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(-8px, -30px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+}
+
+#cloud2 {
+	display: inline-block;
+	height: 15%;
+	position: absolute;
+	bottom: 45%;
+	left:37%;
+	-webkit-animation:float2 4s infinite;
+}
+
+@-webkit-keyframes float2 /* Safari and Chrome */
+{
+			0% {
+                transform: translate(0px, 0px);
+            }
+            30% {
+                transform: translate(-5px, -20px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+}
+
+#p1 {
+	height:10%;
+	position: absolute;
+	right:64%;
+	top:45%;
+	-webkit-animation:myfirst 3s infinite;
+}
+
+@keyframes myfirst {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(0px, -10px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+}           
+
+#p2 {
+	height:10%;
+	right:56%;
+	top:40%;
+	position: absolute;
+	-webkit-animation:myfirst1 5s infinite;
+}
+
+@keyframes myfirst1 {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            30% {
+                transform: translate(0px, -10px);
+            }
+            60% {
+                transform: translate(0px, -20px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }  
+}            
+
+#line {
+    height: 110%;
+	position: absolute;
+	top:-4%;
+	right: 39%;
+	-webkit-animation:myRotate 10s infinite;
+}
+
+@-webkit-keyframes myRotate{
+    0%{ -webkit-transform: rotate(0deg);}
+    50%{ -webkit-transform: rotate(180deg);}
+    100%{ -webkit-transform: rotate(360deg);}
+}
+
+#l {
+	height:13%;
+	position: absolute;
+	bottom: 56%;
+	left: 28%;
+}
+
+
+
+/*登陆框*/
+
+#log {
+    position: absolute;
+    bottom: 38%;
+    left:65%;
+    size: 3rem;
+    z-index: 5;
+}
+
+#user-icon {
+    position: absolute;;
+    left: 50%;
+    top: -50%;
+}
+
+#username {
+    width:150%;
+}
+
+#password {
+    width:150%;
+}
+
+#submit-btn {
+    position: absolute;
+    left:30%;
+    background-color:rgb(0, 82, 204);
+    color: white;
+}
+
+#back {
+    max-height: 100%;
+    max-width: 100%;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+<head>
+    {% load static %}
+	<meta charset="utf-8">
+	<title>时空珞珈——登陆</title>
+	<link rel="stylesheet" href="{% static "css/styleOfIndex.css"%}">
+	<!--Jquery-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+<div id = "log" style = "display: block;">
+
+    <div class = "row">
+			<img src = "{% static "pic/picOfIndex/user.png"%}" style = "display: inline;" id = "user-icon">
+	</div>
+
+	<form class = "form-horizontal" method="post" style = "display: inline-block">
+            {% csrf_token %}
+			<div class = "form-group">
+				<label class = "control-label" style = "color: white;">用户名</label>
+				<input type = "text" class = "col-md-5 form-control" id = "username" placeholder = "username" name="username">
+			</div>
+
+			<div class = "form-group">
+				<label class = "control-label" style = "color: white;">密码</label>
+				<input type = "password" class = "col-md-5 form-control" id = "password" placeholder = "password" name="password">
+			</div>
+
+			<div class = "form-group">
+				<button type = "submit" class = "btn col-md-1 form-control" id = "submit-btn">登陆</button>
+			</div>
+		</form>
+</div>
+
+	<div class = "pic">
+		<img src = "{% static "pic/picOfIndex/back.png"%}" id = "back" class = "img-responsive"  style = "display:block; width:100%; max-width:100%; height:100%;">
+		<img src = "{% static "pic/picOfIndex/cloud.png"%}" id = "cloud">
+		<img src = "{% static "pic/picOfIndex/cloud.png"%}" id = "cloud2">
+		<img src = "{% static "pic/picOfIndex/p1.png"%}" id = "p1">
+		<img src = "{% static "pic/picOfIndex/p2.png"%}" id = "p2">
+		<img src = "{% static "pic/picOfIndex/line.png"%}" id = "line">
+		<img src = "{% static "pic/picOfIndex/l.png"%}" id = "l">
+	</div>
+
+ 	<script type="text/javascript">
+ 		$(document.body).css({
+    	"overflow-x":"hidden",
+    	"overflow-y":"hidden"
+ 		});
+ 	</script>
+
+
+	
+
+
+</body>
+
+</html>

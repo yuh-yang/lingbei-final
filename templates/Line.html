@@ -1,0 +1,128 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>时空珞珈——印记</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/styleOfLine.css" %}">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway'>
+    <!--引用vuejs-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> 
+
+    <!--Jquery-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--顶栏-->
+    <div class = "container-fluid">
+        <div class = "row" id = "header">   
+            <a href = "/index/"><span class = "col-md-1" style = "padding: 0;"><img src = "{% static "pic/picOfMap/blue square.png" %}" id = "square"></span></a>
+            <span class = "option col-md-5" id = "Map"><p id = "fir" style = "display: inline-block;margin: 0;">{{ hello }} ，小王</p></span>
+        </div>
+    </div>
+
+    <!--左边菜单栏-->
+    <div style = "position: absolute;" id = "menu">
+        <center><a href = "/map/"><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home"></a></center>
+        <center><a href = "/line/"><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></a></center>
+        <center><a href = "/timeline/"><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></a></center>
+        <center><a href = "/infoflow"><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></a></center>
+        <!--该函数为根据页面变换菜单图标的函数-->
+                <!--该函数为根据页面变换菜单图标的函数-->
+        <script type="text/javascript">
+            window.onload = function change1() {
+                $(document).ready(function(){
+                    $("#menu").fadeIn(3000);
+                });
+                if(document.title === "时空珞珈——印记") {
+                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line-v.png" %}";
+                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
+                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+                }
+                if(document.title === "时空珞珈——记录") {
+                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                    document.getElementById("home").src = "{% static "pic/picOfMap/home-v.png" %}";
+                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
+                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+                }
+                if(document.title === "时空珞珈——今天") {
+                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                    document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
+                   document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+                }
+                if(document.title === "时空珞珈——发现")  {
+                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                    document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
+                   document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+                }
+        }
+            
+        </script>
+
+    </div>
+
+    <!--地图-->
+    <div>
+        <div class = "img-responsive" style = "position: absolute;">
+            <img src = "{% static "pic/picOfMap/map.png"%}" id = "background">
+        </div> 
+    
+<div>
+
+    <!--报告浮动窗口-->
+	<center>
+		<div id = "report">
+			<button  class = "btn btn-primary" data-toggle="modal" data-target="#myModal" id = "check-report">查看我的报告</button>
+		</div>
+	</center>
+
+	<!--此为模态框-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class = "modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <center><h4 class="modal-title">印记</h4></center>
+                    <center><p>这是属于你自己的独特轨迹，它基于数据统计，反映了你在珞珈留下的最多的印记。</p></center>
+				</div>
+				<div class = "modal-body">
+
+					<p>&ensp;&ensp;&ensp;借着樱顶的第一抹阳光，你起床了。在早上，你最喜欢<I><U>在{{ places.0 }}{{ things.0 }}</U></I>，这可能是你最平常也是最阳光的早晨</p>
+                    <p>&ensp;&ensp;&ensp;早八到了，你要去上课还是干嘛呢？你用自己的行动表明：你很可能会<I><U>在{{ places.1 }}{{ things.1 }}</U></I>，真是个不错的选择啊！</p>
+                    <p>&ensp;&ensp;&ensp;下课了！你会选择找个地方吃饭，还是做别的事情呢？其实，这时候你往往会<I><U>在{{ places.2 }}{{ things.2 }}</U></I>，真是个狼火</p>
+                    <p>&ensp;&ensp;&ensp;一下午的整块时间，珞珈山的主人，你，将会在<I><U>{{ places.3 }}{{ things.3 }}</U></I>，是国家栋梁啊</p>
+                    <p>&ensp;&ensp;&ensp;傍晚，你会想做些什么好呢？数据告诉你，你喜欢<I><U>在{{ places.4 }}{{ things.4 }}</U></I>，真特别</p>
+                    <p>&ensp;&ensp;&ensp;大晚上的，做些什么好呢？是学习还是<I><U>在{{ places.5 }}{{ things.5 }}</U></I>，时间告诉你，你选择了后者</p>
+                    <p>&ensp;&ensp;&ensp;要睡觉了，你选择<I><U>在{{ places.6 }}{{ places.6 }}</U></I>来消磨这些时光，很多人和你一样</p>
+
+				</div>
+
+
+		</div>
+	</div>
+<script>
+        $(function(){
+            $('#myModal').modal({
+            show:true,
+            backdrop:true
+            })
+        });
+    </script>
+
+</html>

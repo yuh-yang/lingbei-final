@@ -1,0 +1,11 @@
+#explore {
+	display: inline-block;
+	position: absolute;
+	bottom: 4%;
+	left:42.5%;
+	background-color: #0052cc; 
+	font-size: 4vh;
+	height:8%;
+	width: 15%;
+	color:white;
+}
