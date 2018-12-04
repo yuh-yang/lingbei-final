@@ -50,8 +50,8 @@ a {
 }
 
 .item {
-	width: 30%;
-	margin-top: 40%;
+	width: 20px;
+	margin-top:110%;
 	margin-bottom: 40%;
 	cursor: pointer;
 	opacity: 1;
@@ -180,10 +180,7 @@ center:hover {
 	opacity: 0.5;
 }
 
-.placeSty {
-	color: blue;
-}
-
-.thingSty {
-	color: red;
+.place {
+	bottom:15%;
+	z-index:1;
 }
