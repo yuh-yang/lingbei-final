@@ -22,195 +22,202 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>\
+
+
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../website/static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../website/static/css/styleOfframe.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
 <body>
 {% load static %}
-    <!--顶栏-->
-    <div class = "container-fluid">
-        <div class = "row" id = "header">   
-            <a href = "/index/"><span class = "col-md-1" style = "padding: 0;"><img src = "{% static "pic/picOfMap/blue square.png" %}" id = "square"></span></a>
-            <span class = "option col-md-5" id = "Map"><p id = "fir" style = "display: inline-block;margin: 0;">{{ hello }} ，小王</p></span>
-        </div>
+<!--顶栏-->
+<div class = "container-fluid">
+    <div class = "row" id = "header">
+        <a href = "/index/"><span class = "col-md-1" style = "padding: 0;"><img src = "{% static "pic/picOfMap/blue square.png" %}" id = "square"></span></a>
+        <span class = "option col-md-5" id = "Map"><p id = "fir" style = "display: inline-block;margin: 0;">{{ hello }} ，小王</p></span>
     </div>
+</div>
 
-    <!--左边菜单栏-->
-    <div style = "position: absolute;" id = "menu">
-        <center><a href = "/map/"><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home"></a></center>
-        <center><a href = "/line/"><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></a></center>
-        <center><a href = "/timeline/"><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></a></center>
-        <center><a href = "/infoflow/"><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></a></center>
-                <!--该函数为根据页面变换菜单图标的函数-->
-                <!--该函数为根据页面变换菜单图标的函数-->
-        <script type="text/javascript">
-            window.onload = function change1() {
-                $(document).ready(function(){
-                    $("#menu").fadeIn(3000);
-                });
-               if(document.title === "时空珞珈——印记") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line-v.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——记录") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home-v.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——今天") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
-                   document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——发现")  {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
-                   document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
+<!--左边菜单栏-->
+<div style = "position: absolute;" id = "menu">
+    <center><a href = "/map/"><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home"></a></center>
+    <center><a href = "/line/"><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></a></center>
+    <center><a href = "/timeline/"><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></a></center>
+    <center><a href = "/infoflow/"><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></a></center>
+    <!--该函数为根据页面变换菜单图标的函数-->
+    <!--该函数为根据页面变换菜单图标的函数-->
+    <script type="text/javascript">
+        window.onload = function change1() {
+            $(document).ready(function(){
+                $("#menu").fadeIn(3000);
+            });
+            if(document.title === "时空珞珈——印记") {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line-v.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+            }
+            if(document.title === "时空珞珈——记录") {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home-v.png" %}";
+                document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+            }
+            if(document.title === "时空珞珈——今天") {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+            }
+            if(document.title === "时空珞珈——发现")  {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+            }
         }
-            
-        </script>
-    </div>
 
-    <!--地图-->
-    <div>
-        {% csrf_token %}
-        <div class = "img-responsive" style = "position: absolute;">
-            <img src = "{% static "pic/picOfMap/map.png" %}" id = "background">
+    </script>
+</div>
 
-            <!--所有浮动图标-->
-            <img src = "{% static "pic/icon/firs.png" %}" class = "icon" id = "一食堂" data-toggle="modal" data-target="#myModal0"  name = "1" onclick="getplace(this.id);getlist(this.id);" >
-            <img src = "{% static "pic/icon/sec.png" %}" class = "icon" id = "二食堂" data-toggle="modal" data-target="#myModal1" name = "2" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/xin-playground.png" %}" class = "icon" id = "信操" data-toggle="modal" data-target="#myModal2" name = "4" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/basketball.png" %}" class = "icon" id = "信部篮球场" data-toggle="modal" data-target="#myModal3" name = "5" onclick="getplace(this.id);getlist(this.id);">
-            
-            <img src = "{% static "pic/icon/xin-playground.png" %}" class = "icon" id = "网安操场" data-toggle="modal" data-target="#myModal4" name = "6" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/wangan.png" %}" class = "icon" id = "网安教学楼" data-toggle="modal" data-target="#myModal5" name = "7" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/qinglou.png" %}" class = "icon" id = "青楼" data-toggle="modal" data-target="#myModal6" name = "8" onclick="getplace(this.id);getlist(this.id);">
-            
-            <img src = "{% static "pic/icon/deren.png" %}" class = "icon" id = "德仁" data-toggle="modal" data-target="#myModal7" name = "9" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/xinghuyuan.png" %}" class = "icon" id = "星湖园" data-toggle="modal" data-target="#myModal8" name = "10" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/library.png" %}" class = "icon" id = "图书馆" data-toggle="modal" data-target="#myModal9" name = "11" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/lake.png" %}" class = "icon" id = "星湖"  data-toggle="modal" data-target="#myModal10" name = "12" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/youyi.png" %}" class = "icon" id = "友谊广场" data-toggle="modal" data-target="#myModal11" name = "13" onclick="getplace(this.id);getlist(this.id);">
-            <img src = "{% static "pic/icon/pool.png" %}" class = "icon" id = "游泳池" data-toggle="modal" data-target="#myModal12" name = "15" onclick="getlist(this.name);" >
+<!--地图-->
+<div>
+    {% csrf_token %}
+    <div class = "img-responsive" style = "position: absolute;">
+        <img src = "{% static "pic/picOfMap/map.png" %}" id = "background">
 
-        </div>
+        <!--所有浮动图标-->
+        <img src = "{% static "pic/icon/firs.png" %}" class = "icon" id = "一食堂" data-toggle="modal" data-target="#myModal0"  name = "1" onclick="getplace(this.id);getlist(this.id);" >
+        <img src = "{% static "pic/icon/sec.png" %}" class = "icon" id = "二食堂" data-toggle="modal" data-target="#myModal1" name = "2" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/xin-playground.png" %}" class = "icon" id = "信操" data-toggle="modal" data-target="#myModal2" name = "4" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/basketball.png" %}" class = "icon" id = "信部篮球场" data-toggle="modal" data-target="#myModal3" name = "5" onclick="getplace(this.id);getlist(this.id);">
+
+        <img src = "{% static "pic/icon/xin-playground.png" %}" class = "icon" id = "网安操场" data-toggle="modal" data-target="#myModal4" name = "6" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/wangan.png" %}" class = "icon" id = "网安教学楼" data-toggle="modal" data-target="#myModal5" name = "7" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/qinglou.png" %}" class = "icon" id = "青楼" data-toggle="modal" data-target="#myModal6" name = "8" onclick="getplace(this.id);getlist(this.id);">
+
+        <img src = "{% static "pic/icon/deren.png" %}" class = "icon" id = "德仁" data-toggle="modal" data-target="#myModal7" name = "9" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/xinghuyuan.png" %}" class = "icon" id = "星湖园" data-toggle="modal" data-target="#myModal8" name = "10" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/library.png" %}" class = "icon" id = "图书馆" data-toggle="modal" data-target="#myModal9" name = "11" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/lake.png" %}" class = "icon" id = "星湖"  data-toggle="modal" data-target="#myModal10" name = "12" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/youyi.png" %}" class = "icon" id = "友谊广场" data-toggle="modal" data-target="#myModal11" name = "13" onclick="getplace(this.id);getlist(this.id);">
+        <img src = "{% static "pic/icon/pool.png" %}" class = "icon" id = "游泳池" data-toggle="modal" data-target="#myModal12" name = "15" onclick="getlist(this.name);" >
 
     </div>
 
-                {% if messages %}
-    <div class="modal fade" id="myModal76" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class = "modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <center><h4 class="modal-title">消息</h4></center>
-                </div>
-                <div class = "modal-body">
+</div>
+
+{% if messages %}
+<div class="modal fade" id="myModal76" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class = "modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <center><h4 class="modal-title">消息</h4></center>
+            </div>
+            <div class = "modal-body">
                 {% for message in messages %}
-                    <center><p>{{message }}</p></center>
+                <center><p>{{message }}</p></center>
                 {% endfor %}
+            </div>
+            {% endif %}
+
+            <!--此为模态框-->
+            <div class="modal fade" id="myModal76" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class = "modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <center><h4 class="modal-title">欢迎体验时空珞珈</h4></center>
+                        </div>
+
+
+                        <div class = "modal-body">
+                            <center><p>点击地标，记录您在哪、做什么，创建您自己的个性化体验</p></center>
+                        </div>
+                    </div>
                 </div>
-{% endif %}
+            </div>
+            <!--此为模态框-->
+            {% for i in a %}
+            <div class="modal fade" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class = "modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">记录</h4>
 
-        <!--此为模态框-->
-    <div class="modal fade" id="myModal76" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class = "modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <center><h4 class="modal-title">欢迎体验时空珞珈</h4></center>
-                </div>
+                            <div id = "place">
+                                <p>今天的日期是{{ date }}</p>
+                                <p>你在 <span id="id" >{{ i.place }}</span></p>
+                            </div>
+
+                            <script type="text/javascript">
+                                function getplace(name) {
+                                    var data = {a:1};
+                                    data.a = name;
+                                    var place = new Vue({
+                                        el: '#place',
+                                        data: data
+                                    })
+                                }
+                            </script>
+                        </div>
 
 
-                <div class = "modal-body">
-                    <center><p>点击地标，记录您在哪、做什么，创建您自己的个性化体验</p></center>
-                </div>
-    </div>
-</div>
-</div>
-    <!--此为模态框-->
-{% for i in a %}
-    <div class="modal fade" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class = "modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">记录</h4>
+                        <div class = "modal-body">
+                            <form action="/map/" method="post">
+                                {% csrf_token %}
+                                <div class = "form-group">
+                                    <label style = "display: block"><!--地点-->
+                                        <select class = "selectpicker show-tick form-control" name="place">
+                                            <option id="place" value = {{ i.place }}>{{ i.place }}</option>
+                                        </select>
+                                    </label>
+                                    &emsp;&emsp;<label style = "display: block">现在的时间是（自动获取）<!--时间框-->
+                                    <select class = "selectpicker show-tick form-control" name="time">
+                                        <option id="time" value = {{ time }}>{{ time }}</option>
+                                    </select>
+                                </label>
+                                    <label class = "control-label" style = "display: block">你在做什么？（请选择）</label>
+                                    <label style = "display: block"><!--事件选择框-->
+                                        <select class = "selectpicker show-tick form-control" name="thing">
+                                            {% for j in i.option %}
+                                            <option id="thing" value = {{ j }}>{{ j }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </label>
+                                    <p>
+                                    <center><label><!--想法输入框-->
+                                        <input name="thought" type="text" placeholder="与大家分享你在想什么" required>
+                                    </label></center>
+                                    </p>
+                                    <center><button style = "margin:5%;" class = "btn btn-default" type="submit">分享</button></center>
 
-                    <div id = "place">
-                        <p>今天的日期是{{ date }}</p>
-                        <p>你在 <span id="id" >{{ i.place }}</span></p>
+                                    <!--提交成功后弹出成功窗口？？？？-->
+                                </div>
+                            </form>
+
+                        </div>
+
+
                     </div>
 
-                    <script type="text/javascript">
-                        function getplace(name) {
-                            var data = {a:1};
-                            data.a = name;
-                            var place = new Vue({
-                            el: '#place',
-                            data: data
-                            })
-                        }
-                    </script>
                 </div>
-
-
-                <div class = "modal-body">
-                    <form action="/map/" method="post">
-                        {% csrf_token %}
-                        <div class = "form-group">
-                            <label style = "display: block"><!--地点-->
-                                <select class = "selectpicker show-tick form-control" name="place">
-                                        <option id="place" value = {{ i.place }}>{{ i.place }}</option>
-                                </select>
-                            </label>
-                        &emsp;&emsp;<label style = "display: block">现在的时间是（自动获取）<!--时间框-->
-                                <select class = "selectpicker show-tick form-control" name="time">
-                                        <option id="time" value = {{ time }}>{{ time }}</option>
-                                </select>
-                            </label>
-                            <label class = "control-label" style = "display: block">你在做什么？（请选择）</label>
-                            <label style = "display: block"><!--事件选择框-->
-                                <select class = "selectpicker show-tick form-control" name="thing">
-                                    {% for j in i.option %}
-                                        <option id="thing" value = {{ j }}>{{ j }}</option>
-                                    {% endfor %}
-                                </select>
-                            </label>
-                            <p>
-                                <center><label><!--想法输入框-->
-                                    <input name="thought" type="text" placeholder="与大家分享你在想什么" required>
-                                </label></center>
-                            </p>
-                            <center><button style = "margin:5%;" class = "btn btn-default" type="submit">分享</button></center>
-
-                            <!--提交成功后弹出成功窗口？？？？-->
-                        </div>
-                    </form>
-
-                </div>
-
-
-        </div>
-
-    </div>
-    </div>
-        <script>
-        $(function(){
-            $('#myModal76').modal({
-            show:true,
-            backdrop:true
-            })
-        });
-    </script>
-{% endfor %}
+            </div>
+            <script>
+                $(function(){
+                    $('#myModal76').modal({
+                        show:true,
+                        backdrop:true
+                    })
+                });
+            </script>
+            {% endfor %}
 </body>
 </html>
 

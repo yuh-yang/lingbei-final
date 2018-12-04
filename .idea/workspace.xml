@@ -130,26 +130,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="90" />
-          <entry key="html" value="476" />
+          <entry key="html" value="521" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="90" />
-          <entry key="HTML" value="476" />
+          <entry key="HTML" value="521" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="6" />
-          <entry key="html" value="12" />
+          <entry key="css" value="8" />
+          <entry key="html" value="13" />
           <entry key="js" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="6" />
-          <entry key="HTML" value="12" />
+          <entry key="CSS" value="8" />
+          <entry key="HTML" value="13" />
           <entry key="JavaScript" value="1" />
         </counts>
       </usages-collector>
@@ -158,24 +158,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Index.html">
+        <entry file="file://$PROJECT_DIR$/templates/frame.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <caret line="10" column="116" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="116" />
               <folding>
-                <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/frame.html">
+        <entry file="file://$PROJECT_DIR$/templates/Map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="486">
+              <caret line="31" column="116" lean-forward="true" selection-start-line="31" selection-start-column="116" selection-end-line="31" selection-end-column="116" />
               <folding>
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#7339#7346#1" expanded="true" />
+                <element signature="e#8083#8090#1" expanded="true" />
+                <element signature="e#8915#8922#1" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#10395#10401#0" expanded="true" />
+                <element signature="e#10401#10407#0" expanded="true" />
+                <element signature="n#style#0;n#label#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#center#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,7 +232,6 @@
         <option value="$PROJECT_DIR$/Luojia_Image/urls.py" />
         <option value="$PROJECT_DIR$/templates/Logo.html" />
         <option value="$PROJECT_DIR$/templates/InfoFlow.html" />
-        <option value="$PROJECT_DIR$/templates/Map.html" />
         <option value="$PROJECT_DIR$/website/models.py" />
         <option value="$PROJECT_DIR$/1.py" />
         <option value="$PROJECT_DIR$/templates/Time-line.html" />
@@ -234,6 +246,7 @@
         <option value="$PROJECT_DIR$/templates/.idea/main.html" />
         <option value="$PROJECT_DIR$/templates/.idea/印记.html" />
         <option value="$PROJECT_DIR$/templates/frame.html" />
+        <option value="$PROJECT_DIR$/templates/Map.html" />
       </list>
     </option>
   </component>
@@ -319,8 +332,8 @@
       <recent name="C:\Users\Xue\Documents\GitHub\lingbei-final\website\static\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Xue\Documents\GitHub\lingbei-final\website\static\js" />
       <recent name="C:\Users\Xue\Documents\GitHub\lingbei-final\website\static\css" />
+      <recent name="C:\Users\Xue\Documents\GitHub\lingbei-final\website\static\js" />
       <recent name="C:\Users\Xue\Documents\GitHub\lingbei-final\website\static\css\css" />
       <recent name="C:\Users\52563\PycharmProjects\Luojia_Image\website\static\css" />
     </key>
@@ -443,12 +456,12 @@
       <workItem from="1543836283445" duration="2387000" />
       <workItem from="1543848638161" duration="5119000" />
       <workItem from="1543854005261" duration="41000" />
-      <workItem from="1543890559959" duration="5341000" />
+      <workItem from="1543890559959" duration="6943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13933000" />
+    <option name="totallyTimeSpent" value="15535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,13 +568,6 @@
     <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/Line.html" />
     <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/info flow.html" />
     <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/Index.html" />
-    <entry file="file://$PROJECT_DIR$/website/static/css/styleOfMap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/django/templatetags/static.py" />
     <entry file="file://$PROJECT_DIR$/website/static/pic/picOfMap/line.png">
       <provider selected="true" editor-type-id="images" />
@@ -631,13 +637,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/.idea/new1.html" />
     <entry file="file://$PROJECT_DIR$/templates/.idea/new2.html" />
-    <entry file="file://$PROJECT_DIR$/templates/Map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="202" column="10" selection-start-line="202" selection-start-column="10" selection-end-line="202" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/InfoFlow.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="657">
@@ -690,22 +689,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/css/styleOfframe.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/css/styleOfMap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/frame.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <caret line="10" column="116" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="10" selection-end-column="116" />
           <folding>
             <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="31" column="116" lean-forward="true" selection-start-line="31" selection-start-column="116" selection-end-line="31" selection-end-column="116" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#7339#7346#1" expanded="true" />
+            <element signature="e#8083#8090#1" expanded="true" />
+            <element signature="e#8915#8922#1" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#10395#10401#0" expanded="true" />
+            <element signature="e#10401#10407#0" expanded="true" />
+            <element signature="n#style#0;n#label#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#2;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#3;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#center#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
