@@ -124,36 +124,37 @@
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="495" />
-          <entry key="html" value="1899" />
+          <entry key="css" value="499" />
+          <entry key="html" value="2013" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="495" />
-          <entry key="HTML" value="1899" />
+          <entry key="CSS" value="499" />
+          <entry key="HTML" value="2013" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="17" />
-          <entry key="html" value="24" />
-          <entry key="jpg" value="1" />
+          <entry key="css" value="18" />
+          <entry key="html" value="27" />
+          <entry key="jpg" value="11" />
           <entry key="js" value="3" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="17" />
-          <entry key="HTML" value="24" />
-          <entry key="Image" value="3" />
+          <entry key="CSS" value="18" />
+          <entry key="HTML" value="27" />
+          <entry key="Image" value="13" />
           <entry key="JavaScript" value="3" />
         </counts>
       </usages-collector>
@@ -197,63 +198,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/frame.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Line.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-              <folding>
-                <element signature="e#3517#3523#0#HTML" expanded="true" />
-                <element signature="e#3529#3535#0#HTML" expanded="true" />
-                <element signature="e#4309#4315#0#HTML" expanded="true" />
-                <element signature="e#4315#4321#0#HTML" expanded="true" />
-                <element signature="e#4321#4327#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="60" column="63" lean-forward="true" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Luojia_Image/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="26" column="81" lean-forward="true" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Map.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="47" column="50" lean-forward="true" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+            <state relative-caret-position="-3732">
+              <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -261,15 +210,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Today.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1767">
-              <caret line="93" column="14" lean-forward="true" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+            <state relative-caret-position="942">
+              <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
               <folding>
-                <element signature="e#2945#2951#0#HTML" expanded="true" />
-                <element signature="e#2932#2938#0#HTML" expanded="true" />
-                <element signature="e#3586#3592#0#HTML" expanded="true" />
-                <element signature="e#3756#3762#0#HTML" expanded="true" />
-                <element signature="e#4392#4398#0#HTML" expanded="true" />
+                <element signature="e#2945#2951#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/Map.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+              <folding>
+                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#label#3;n#div#0;n#form#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#option#0;n#select#0;n#label#3;n#div#0;n#form#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/static/css/styleOfMap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3">
+              <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
             </state>
           </provider>
         </entry>
@@ -287,7 +255,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>input</find>
-      <find>in</find>
       <find>pic</find>
       <find>button</find>
       <find>log</find>
@@ -300,6 +267,7 @@
       <find>item</find>
       <find>endfor</find>
       <find>place</find>
+      <find>in</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -326,7 +294,6 @@
         <option value="$PROJECT_DIR$/templates/Index.html" />
         <option value="$PROJECT_DIR$/templates/.idea/main.html" />
         <option value="$PROJECT_DIR$/templates/.idea/印记.html" />
-        <option value="$PROJECT_DIR$/website/static/css/styleOfMap.css" />
         <option value="$PROJECT_DIR$/templates/.idea/InfoFlow-预留.html" />
         <option value="$PROJECT_DIR$/website/static/css/styleOfframe.css" />
         <option value="$PROJECT_DIR$/templates/InfoFlow.html" />
@@ -335,10 +302,11 @@
         <option value="$PROJECT_DIR$/1.py" />
         <option value="$PROJECT_DIR$/templates/Yesterday.html" />
         <option value="$PROJECT_DIR$/website/views.py" />
-        <option value="$PROJECT_DIR$/templates/Map.html" />
         <option value="$PROJECT_DIR$/templates/Line.html" />
         <option value="$PROJECT_DIR$/templates/Today.html" />
         <option value="$PROJECT_DIR$/templates/frame.html" />
+        <option value="$PROJECT_DIR$/website/static/css/styleOfMap.css" />
+        <option value="$PROJECT_DIR$/templates/Map.html" />
       </list>
     </option>
   </component>
@@ -350,9 +318,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="930" />
-    <option name="y" value="123" />
-    <option name="width" value="894" />
-    <option name="height" value="732" />
+    <option name="y" value="122" />
+    <option name="width" value="895" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -369,17 +337,40 @@
             <path>
               <item name="lingbei-final" type="b2602c69:ProjectViewProjectNode" />
               <item name="lingbei-final" type="462c0819:PsiDirectoryNode" />
-              <item name="Luojia_Image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lingbei-final" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lingbei-final" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lingbei-final" type="b2602c69:ProjectViewProjectNode" />
               <item name="lingbei-final" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lingbei-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lingbei-final" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lingbei-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lingbei-final" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lingbei-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lingbei-final" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="pic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lingbei-final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lingbei-final" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="pic" type="462c0819:PsiDirectoryNode" />
+              <item name="picOfLine" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -422,7 +413,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.Luojia_Image">
+  <component name="RunManager" selected="Unknown.Luojia_Image864501352">
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Luojia_Image" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -512,12 +503,6 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Django server.Luojia_Image" />
-      <item itemvalue="Python.1" />
-      <item itemvalue="Python.run" />
-      <item itemvalue="Python.views" />
-    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -537,11 +522,12 @@
       <workItem from="1543890559959" duration="14470000" />
       <workItem from="1543933719397" duration="8472000" />
       <workItem from="1543965313280" duration="12530000" />
+      <workItem from="1543995631168" duration="3180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44064000" />
+    <option name="totallyTimeSpent" value="47244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,10 +539,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="63" y="-7" width="1480" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32659662" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3261773" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -580,27 +566,27 @@
       <window_info anchor="right" id="Database" order="4" weight="0.32983023" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31689572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3261773" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.05496454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32978722" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3285968" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5012126" side_tool="true" weight="0.8067376" />
-      <window_info anchor="bottom" id="manage.py@Luojia_Image" order="12" sideWeight="0.4987874" weight="0.8067376" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32978722" />
+      <window_info anchor="bottom" id="manage.py@Luojia_Image" order="12" sideWeight="0.4987874" weight="0.41385436" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32983023" />
       <window_info anchor="right" id="Database" order="4" weight="0.32983023" />
     </layout-to-restore>
   </component>
@@ -611,22 +597,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/django/core/handlers/exception.py" />
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/django/core/handlers/base.py" />
-    <entry file="file://$PROJECT_DIR$/website/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Tencent Files/525639207/FileRecv/Someone's Tale.py" />
-    <entry file="file://$PROJECT_DIR$/../杂物/Luojia_Image/website/views.py" />
-    <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/Map.html" />
-    <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/Time-line.html" />
     <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/Line.html" />
     <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/info flow.html" />
     <entry file="file://$USER_HOME$/Downloads/lingbei-web11.16-master (3) (2)/Index.html" />
@@ -701,22 +671,12 @@
     <entry file="file://$PROJECT_DIR$/website/static/css/styleOfInfo.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/css/styleOfMap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="183" column="13" selection-start-line="183" selection-start-column="13" selection-end-line="183" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/.idea/TimeLine-预留.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
           <caret line="136" column="7" selection-start-line="136" selection-start-column="7" selection-end-line="136" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/图书馆.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/website/static/css/styleOfLine.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -736,13 +696,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Luojia_Image (2)/templates/Map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="208" column="18" selection-start-line="206" selection-end-line="211" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Luojia_Image (2)/templates/Map.html" />
     <entry file="file://$PROJECT_DIR$/templates/.idea/InfoFlow-预留.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2185">
@@ -764,55 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Luojia_Image/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="81" lean-forward="true" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Today.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="93" column="14" lean-forward="true" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
-          <folding>
-            <element signature="e#2945#2951#0#HTML" expanded="true" />
-            <element signature="e#2932#2938#0#HTML" expanded="true" />
-            <element signature="e#3586#3592#0#HTML" expanded="true" />
-            <element signature="e#3756#3762#0#HTML" expanded="true" />
-            <element signature="e#4392#4398#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="47" column="50" lean-forward="true" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Line.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-          <folding>
-            <element signature="e#3517#3523#0#HTML" expanded="true" />
-            <element signature="e#3529#3535#0#HTML" expanded="true" />
-            <element signature="e#4309#4315#0#HTML" expanded="true" />
-            <element signature="e#4315#4321#0#HTML" expanded="true" />
-            <element signature="e#4321#4327#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/InfoFlow.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -820,17 +725,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Luojia_Image/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="81" selection-start-line="26" selection-start-column="81" selection-end-line="26" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="60" column="63" lean-forward="true" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
+        <state relative-caret-position="681">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/frame.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        <state relative-caret-position="684">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/一食堂.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/二食堂.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/信操.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/图书馆.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/德仁广场.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/星湖.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/星湖园.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/网安教学楼.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/pic/picOfLine/青楼.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Line.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3732">
+          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Today.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="942">
+          <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
+          <folding>
+            <element signature="e#2945#2951#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/css/styleOfMap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="154" lean-forward="true" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#label#3;n#div#0;n#form#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#option#0;n#select#0;n#label#3;n#div#0;n#form#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

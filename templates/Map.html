@@ -86,22 +86,8 @@
 
 <!--提交成功提示-->
 {% if messages %}
-<div class="modal fade" id="myModal76" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class = "modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <center><h4 class="modal-title">消息</h4></center>
-            </div>
-            <div class = "modal-body">
-                {% for message in messages %}
-                <center><p>{{message }}</p></center>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-            {% endif %}
+
+{% endif %}
 
 <!--此为模态框-引导-->
 <!-- Modal Structure -->
@@ -119,7 +105,7 @@
 
 <!--此为模态框-添加页面-->
 {% for i in a %}
-<div class="place modal" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style = "position: absolute;max-height: 80%">
+<div class="place modal" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style = "position: absolute;max-height: 90%;">
         <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style = "background-color: transparent;border:0;font-size:1.3rem;"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">记录</h4>
@@ -155,9 +141,9 @@
             </label>
                 <label class = "control-label" style = "display: block">你在做什么？（请选择）</label>
                 <label style = "display: block"><!--事件选择框-->
-                    <select class = "selectpicker show-tick form-control" name="thing">
+                    <select class = "selectpicker show-tick form-control" name="thing" style = "z-index: 1;">
                         {% for j in i.option %}
-                        <option id="thing" value = {{ j }}>{{ j }}</option>
+                        <option id="thing" value = {{ j }} style = "z-index: 1;">{{ j }}</option>
                         {% endfor %}
                     </select>
                 </label>
@@ -212,16 +198,12 @@
         $('.close').on('click', function() {
             $('#modal2').modal('close');
         });
+        $('#modal1').modal('open');
         <!--初始化下拉菜单-->
         $(document).ready(function() {
 
             $('select').material_select();
 
-        });
-        <!--禁用拖动条-->
-        $(".modal").css({
-            "overflow-x":"hidden",
-            "overflow-y":"hidden"
         });
     });
 </script>
