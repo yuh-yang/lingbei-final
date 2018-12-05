@@ -55,3 +55,24 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+@media only screen and (min-width: 1029px){
+  .card-container {
+    width: 50%;
+    position: relative;
+    left: 25%;
+  }
+}
+
+.touxiang {
+  height: 8%;
+  width: 8%;
+  position: relative;
+  top:10px;
+  left:5px;
+}
+
+.user-img {
+  height: 40%;
+  width: 40%;
+}

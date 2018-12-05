@@ -1,131 +1,124 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>时空珞珈——记录</title>
     {% load static %}
-    <meta charset="utf-8">
-    <title>时空珞珈——发现</title>
-    <link rel="stylesheet" href="{% static "css/styleOfInfo.css" %}">
+
+    <!--js-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="{% static "css/styleOfMap.css" %}">
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway'>
 
-    <!--引用vuejs-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> 
-
-    <!--Jquery-->
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-
-    <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
-
-
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static "css/materialize.min.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{% static "css/styleOfframe.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!--顶栏-->
-    <div class = "container-fluid">
-        <div class = "row" id = "header">   
-            <a href = "index.html"><span class = "col-md-1" style = "padding: 0;"><img src = "{% static "pic/picOfMap/blue square.png" %}" id = "square"></span></a>
-            <span class = "option col-md-5" id = "Map"><p id = "fir" style = "display: inline-block;margin: 0;">{{ hello }} ，小王</p></span>
+
+<!--顶部导航栏-->
+<div class =  "navbar-fixed">
+    <nav class="blue" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home" style = "display:inline-block;"></li>
+                <li><a href = "/map/">记录</a></li>
+                <li><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></li>
+                <li><a href = "/line/">印记</a></li>
+                <li><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></li>
+                <li><a href = "/timeline/">今天</a></li>
+                <li><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></li>
+                <li><a href = "/infoflow/">发现</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href = "/map/">记录</a></li>
+                <li><a href = "/line/"印记</a></li>
+                <li><a href = "/timeline/">今天</a></li>
+                <li><a href = "/infoflow/">发现</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-    </div>
-
-    <!--左边菜单栏-->
-    <div style = "position: absolute;" id = "menu">
-        <center><a href = "/map/"><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home"></a></center>
-        <center><a href = "/line/"><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></a></center>
-        <center><a href = "/timeline/"><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></a></center>
-        <center><a href = "/infoflow"><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></a></center>
-
-        <!--该函数为根据页面变换菜单图标的函数-->
-        <script type="text/javascript">
-            window.onload = function change1() {
-                $(document).ready(function(){
-                    $("#menu").fadeIn(3000);
-                });
-                if(document.title === "时空珞珈——印记") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line-v.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——记录") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home-v.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——今天") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("Time-line").src = "{% static "pic/picOfMap/light-v.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——发现")  {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("Time-line").src = "{% static "pic/picOfMap/light.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info-v.png" %}";
-                }
-        }
-            
-        </script>
-
-    </div>
-
-    <!--地图-->
-    <div>
-        <div class = "img-responsive" style = "position: absolute;">
-            <img src = "{% static "pic/picOfMap/map.png" %}" id = "background">
-        </div> 
-    
-<div>
-
-    <!--报告浮动窗口-->
-    <center>
-        <div id = "report">
-            <button  class = "btn btn-primary" data-toggle="modal" data-target="#myModal" id = "check-report">查看信息流</button>
-        </div>
-    </center>
-
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class = "modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <center><h4 class="modal-title">发现与你在同时同地，做同样事情的有趣的灵魂</h4></center>
-				</div>
-
-
-				<div class = "modal-body">
-                    <ul class="list-group">
-                        {% for i in flow %}
-                        <li class="list-group-item">
-    					    <h4 style = "display: inline-block;">{{ i.username }}</h4>
-                            <h4 style="display: inline-block; " id = "pla">{{ i.place }}</h4>
-                            <p>{{ i.thought }}</p>
-                            <h4 id = "tim">{{ i.date }} &emsp; {{ i.time }}</h4>
-                        </li>
-                        {% endfor %}
-                    </ul>  
-		</div>
-	</div>
-</div>
+    </nav>
 </div>
 
-    <script>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+
+<script>
+    (function($){
+        <!--初始化侧边栏及时差效果初始化-->
         $(function(){
-            $('#myModal').modal({
-            show:true,
-            backdrop:true
-            })
-        });
-    </script>
 
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+    <!--模态初始化-->
+    $(document).ready(function(){
+        // .modal-trigger类所在的a标签的href属性必须制定模态框的id才能被触发。
+        $('.modal').modal({
+            dismissible: false, // 点击模态外面模态消失关闭
+            opacity: .5, // 相对于背景的不透明度
+            in_duration: 300, // 显示特效的时间
+            out_duration: 200, // 消失特效时间
+            starting_top: '4%', // 启动时的样式属性
+            ending_top: '10%', // 结束时的样式属性
+
+        });
+        $('.open').on('click', function() {
+            $('#modal1').modal('open');
+        });
+        $('.close').on('click', function() {
+            $('#modal2').modal('close');
+        });
+        <!--初始化下拉菜单-->
+        $(document).ready(function() {
+
+            $('select').material_select();
+
+        });
+        <!--禁用拖动条-->
+        $(".modal").css({
+            "overflow-x":"hidden",
+            "overflow-y":"hidden"
+        });
+    });
+</script>
+
+
+<!--底部栏-->
+<footer class="page-footer teal" style = "float: bottom;position: relative;">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">时空珞珈</h5>
+                <p class="grey-text text-lighten-4">关于“珞珈印象”这么一个主题，我们思考了很久：在视觉上经典的绿瓦和牌坊，象征中不变的樱花和东湖水之外，珞珈给予我们的、我们留在珞珈的，究竟是什么？
+                    这一次的网页设计就代表了我们的答案——我们在珞珈的时光</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <h5 style = "display: inline-block;">编程哲学</h5>
+        </div>
+    </div>
+</footer>
+
+</body>
 
 </html>
