@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>时空珞珈——记录</title>
+    <title>时空珞珈——印记</title>
     {% load static %}
 
     <!--js-->
@@ -37,15 +37,15 @@
                 <li><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></li>
                 <li><a href = "/line/">印记</a></li>
                 <li><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></li>
-                <li><a href = "/timeline/">今天</a></li>
+                <li><a href = "/timeline/">流逝</a></li>
                 <li><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></li>
                 <li><a href = "/infoflow/">发现</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li><a href = "/map/">记录</a></li>
-                <li><a href = "/line/"印记</a></li>
-                <li><a href = "/timeline/">今天</a></li>
+                <li><a href = "/line/">印记</a></li>
+                <li><a href = "/timeline/">流逝</a></li>
                 <li><a href = "/infoflow/">发现</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -93,7 +93,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src = "{% static "pic/picOfLine/background2.jpg" %}" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src = "{{ STATIC_URL }}{{ urls.0 }}" alt="Unsplashed background img 2"></div>
 </div>
 
 <div class="container">
@@ -119,7 +119,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src = "{% static "pic/picOfLine/青楼.jpg" %}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src = "{{ STATIC_URL }}{{ urls.1 }}" alt="Unsplashed background img 3"></div>
 </div>
 
 <div class="container">
@@ -145,7 +145,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src = "{% static "pic/picOfLine/食堂.jpg" %}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src = "{{ STATIC_URL }}{{ urls.2 }}" alt="Unsplashed background img 3"></div>
 </div>
 
 <div class="container">
@@ -171,7 +171,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src = "{% static "pic/picOfLine/信操.jpg" %}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src = "{{ STATIC_URL }}{{ urls.3 }}" alt="Unsplashed background img 3"></div>
 </div>
 
 <div class="container">
@@ -197,7 +197,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src = "{% static "pic/picOfLine/图书馆.jpg" %}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src = "{{ STATIC_URL }}{{ urls.4 }}" alt="Unsplashed background img 3"></div>
 </div>
 
 <div class="container">
@@ -223,7 +223,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src = "{% static "pic/picOfLine/信操.jpg" %}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src = "{{ STATIC_URL }}{{ urls.5 }}" alt="Unsplashed background img 3"></div>
 </div>
 
 <div class="container">
@@ -249,7 +249,7 @@
             </div>
         </div>
     </div>
-    <div class="parallax"><img src = "{% static "pic/picOfLine/信操.jpg" %}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src = "{{ STATIC_URL }}{{ urls.6 }}" alt="Unsplashed background img 3"></div>
 </div>
 
 <!--  Scripts-->

@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>时空珞珈——记录</title>
+    <title>时空珞珈——流逝</title>
     {% load static %}
 
     <!--js-->
@@ -38,15 +38,15 @@
                 <li><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></li>
                 <li><a href = "/line/">印记</a></li>
                 <li><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></li>
-                <li><a href = "/timeline/">今天</a></li>
+                <li><a href = "/timeline/">流逝</a></li>
                 <li><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></li>
                 <li><a href = "/infoflow/">发现</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
                 <li><a href = "/map/">记录</a></li>
-                <li><a href = "/line/"印记</a></li>
-                <li><a href = "/timeline/">今天</a></li>
+                <li><a href = "/line/">印记</a></li>
+                <li><a href = "/timeline/">流逝</a></li>
                 <li><a href = "/infoflow/">发现</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -56,17 +56,44 @@
 
 
 <div class="carousel">
-    <a class="carousel-item" href="#one!">
+    {% for i in today %}
+    <a class="carousel-item" href="#">
+            <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">{{ i.date }}&nbsp;{{ i.time }}</p>
+        </div>
         <div class="modal-content">
-            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">在{{ post_list.0.place }}&nbsp;{{ post_list.0.thing }}</p>
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">在{{ i.place }}&nbsp;{{ i.thing }}</p>
+        </div>
+            <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">"{{ i.thought }}"</p>
         </div>
     </a>
-    <a class="carousel-item" href="#two!">
-        <p  class="form-control input"  style ="font-size:1rem; width: 15%;display: inline-block;" id = "eleven">在{{ post_list.2.place }}&nbsp;{{ post_list.2.thing }}</p>
+    {% endfor %}    {% for i in yesterday %}
+    <a class="carousel-item" href="#">
+            <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">{{ i.date }}&nbsp;{{ i.time }}</p>
+        </div>
+        <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">在{{ i.place }}&nbsp;{{ i.thing }}</p>
+        </div>
+            <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">"{{ i.thought }}"</p>
+        </div>
     </a>
-    <a class="carousel-item" href="#three!"><div><h1>hhh1</h1></div></a>
-    <a class="carousel-item" href="#four!"><div><h1>hhh1</h1></div></a>
-    <a class="carousel-item" href="#five!"><div><h1>hhh1</h1></div></a>
+    {% endfor %}
+    {% for i in beforeyesterday %}
+    <a class="carousel-item" href="#">
+            <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">{{ i.date }}{{ i.time }}</p>
+        </div>
+        <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">在{{ i.place }}&nbsp;{{ i.thing }}</p>
+        </div>
+            <div class="modal-content">
+            <p  class=""  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">"{{ i.thought }}"</p>
+        </div>
+    </a>
+    {% endfor %}
 </div>
 
 

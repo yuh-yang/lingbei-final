@@ -12,6 +12,7 @@ def index(request):
     return render(request,'Logo.html')
 
 def user_login(request):
+
     print(request.method)
     if request.method == "POST":
         userID = request.POST.get('username')
@@ -51,19 +52,13 @@ def user_login(request):
 @login_required
 def make_historyline(request):
     username = request.user.username#获取用户名
-    today = datetime.date.today().isoformat() #获取今天日期
-    post_listr = Tweet.objects.filter(username = username).filter(date = today).order_by('time')
-    timebox = (["6:00--8:00", "8:00--11:00", "11:00--14:00", "14:00--17:00", "17:00--19:00", "19:00--21:00",
-                "21:00--23:00"])
-    post_list = [' ',' ',' ',' ',' ',' ',' ']
-
-    for j in range(len(timebox) - 1):
-        for i in post_listr:
-            if i.time==timebox[j]:
-                post_list[j] = i
-                break
-
-    return render(request, 'Time-line.html', {'post_list': post_list,'date': today,'username':username,'hello':sayhello()})
+    today = datetime.date.today()
+    yesterday = datetime.date.today() + datetime.timedelta(-1) #获取昨天日期
+    beforeyesterday = datetime.date.today() + datetime.timedelta(-2) #前天
+    post_list_today = Tweet.objects.filter(username = username).filter(date = today.isoformat()).order_by('time')
+    post_list_beforeyesterday = Tweet.objects.filter(username = username).filter(date = beforeyesterday.isoformat()).order_by('time')
+    post_list_yesterday = Tweet.objects.filter(username = username).filter(date = yesterday.isoformat()).order_by('time')
+    return render(request, 'Today.html', {'yesterday': post_list_yesterday,'beforeyesterday': post_list_beforeyesterday, 'today': post_list_today,'date': today, 'username':username, 'hello':sayhello()})
 
 def map(request):
     global timeper
@@ -122,11 +117,16 @@ def draw_line(request):
     things = result[0].values()
     place = []
     thing = []
+    urls = []
+    rurl_head = "/static/pic/picOfLine/"
+    rurl_foot = ".jpg"
     for i in places:
         place.append(i)
     for i in things:
         thing.append(i)
-    return render(request,'Line.html', {'places':place,'things':thing,'username':request.user.username,'hello':sayhello()})
+    for i in places:
+        urls.append(rurl_head+i+rurl_foot)
+    return render(request,'Line.html', {'places':place,'things':thing,'username':request.user.username,'hello':sayhello(),'urls':urls})
 
 def info_flow(request):
     personal_result = mostdone(request.user.username) #获取最常做的事结果
