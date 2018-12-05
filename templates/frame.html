@@ -36,29 +36,17 @@
 </div>
 
 <!--主体内容-->
-<!-- Modal Trigger -->
-<a class="waves-effect waves-light btn" href="#modal1">模态</a>
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <h4>模态标题</h4>
-        <p>一堆文本</p>
-    </div>
-    <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">同意</a>
-    </div>
-</div>
-
-
-<div class="input-field col s12">
-    <select>
-        <option value="" disabled selected>Choose your option</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-    </select>
-    <label>Materialize Select</label>
+<div class="carousel">
+    <a class="carousel-item" href="#one!">
+        <div class="modal-content">
+            <h4>欢迎体验时空珞珈</h4>
+            <p>点击地标，记录您在哪、做什么，创建您自己的个性化体验</p>
+        </div>
+    </a>
+    <a class="carousel-item" href="#two!"><div><h1>hhh1</h1></div></a>
+    <a class="carousel-item" href="#three!"><div><h1>hhh1</h1></div></a>
+    <a class="carousel-item" href="#four!"><div><h1>hhh1</h1></div></a>
+    <a class="carousel-item" href="#five!"><div><h1>hhh1</h1></div></a>
 </div>
 
 
@@ -118,6 +106,11 @@
 
             $('select').material_select();
 
+        });
+
+
+        $(document).ready(function(){
+            $('.carousel').carousel();
         });
     });
 </script>

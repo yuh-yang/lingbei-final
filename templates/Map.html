@@ -119,7 +119,7 @@
 
 <!--此为模态框-添加页面-->
 {% for i in a %}
-<div class="place modal" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style = "position: absolute">
+<div class="place modal" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style = "position: absolute;max-height: 80%">
         <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" style = "background-color: transparent;border:0;font-size:1.3rem;"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">记录</h4>
@@ -186,6 +186,7 @@
 
 <script>
     (function($){
+        <!--初始化侧边栏及时差效果初始化-->
         $(function(){
 
             $('.button-collapse').sideNav();
@@ -193,6 +194,7 @@
 
         }); // end of document ready
     })(jQuery); // end of jQuery name space
+    <!--模态初始化-->
     $(document).ready(function(){
         // .modal-trigger类所在的a标签的href属性必须制定模态框的id才能被触发。
         $('.modal').modal({

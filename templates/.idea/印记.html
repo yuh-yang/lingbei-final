@@ -1,315 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <title>印记</title>
+    <meta charset="utf-8">
+    <title>时空珞珈——今天</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/styleOfTime-Line.css" %}">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway'>
+    <!--引用vuejs-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!--Jquery-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
-<!--顶部导航栏-->
-<div class =  "navbar-fixed">
-<nav class="blue" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">记录</a></li>
-            <li><a href="#">印记</a></li>
-            <li><a href="#">今天</a></li>
-            <li><a href="#">发现</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">记录</a></li>
-            <li><a href="#">印记</a></li>
-            <li><a href="#">今天</a></li>
-            <li><a href="#">发现</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+<!--顶栏-->
+<div class = "container-fluid">
+    <div class = "row" id = "header">
+        <a href = "/index/"><span class = "col-md-1" style = "padding: 0;"><img src = "{% static "pic/picOfMap/blue square.png" %}" id = "square"></span></a>
+        <span class = "option col-md-5" id = "Map"><p id = "fir" style = "display: inline;margin: 0;">{{ hello }} ，小王</p></span>
     </div>
-</nav>
 </div>
 
-<div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <br><br>
-            <h1 class="header center teal-text text-lighten-2">视差模板</h1>
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-            <div class="row center">
-                <a href="http://www.materializecss.cn/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">开始学习</a>
-            </div>
-            <br><br>
+<!--左边菜单栏-->
+<div style = "position: absolute;" id = "menu">
+    <center><a href = "/map/"><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home"></a></center>
+    <center><a href = "/line/"><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></a></center>
+    <center><a href = "/timeline/"><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></a></center>
+    <center><a href = "/infoflow"><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></a></center>
+    <!--该函数为根据页面变换菜单图标的函数-->
+    <!--该函数为根据页面变换菜单图标的函数-->
+    <script type="text/javascript">
+        window.onload = function change1() {
+            $(document).ready(function(){
+                $("#menu").fadeIn(3000);
+            });
+            if(document.title === "时空珞珈——印记") {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line-v.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+            }
+            if(document.title === "时空珞珈——记录") {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home-v.png" %}";
+                document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+            }
+            if(document.title === "时空珞珈——今天") {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                document.getElementById("Time-line").src = "{% static "pic/picOfMap/light-v.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
+            }
+            if(document.title === "时空珞珈——发现")  {
+                document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
+                document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
+                document.getElementById("Time-line").src = "{% static "pic/picOfMap/light.png" %}";
+                document.getElementById("info flow").src = "{% static "pic/picOfMap/info-v.png" %}";
+            }
+        }
 
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background1.jpg" alt="Unsplashed background img 1"></div>
+    </script>
 </div>
 
+<!--地图-->
+<div>
+    <div class = "img-responsive" style = "position: absolute;">
+        <img src = "{% static "pic/picOfMap/map.png" %}" id = "background">
+    </div>
 
-<div class="container">
-    <div class="section">
+    <div>
 
-        <!--   Icon Section   -->
-        <div class="row">
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                    <h5 class="center">快速开发</h5>
+        <!--浮动窗口-->
+        <center>
+            <div id = "report">
+                <button  class = "btn btn-primary" data-toggle="modal" data-target="#myModal" id = "check-report">查看我的Timeline</button>
+            </div>
+        </center>
 
-                    <p class="light">我们做最繁重的工作为你提供一个默认的风格，把我们的自定义组件。此外，我们精致的动画和转换，为开发人员提供一个更流畅的体验。</p>
+        <!--模态框-->
+
+
+
+        <div class="modal fade" tabindex="-1" role="dialog" id = "myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <center><h4 class="modal-title">今天</h4></center>
+                        <center><p>你可以在这里查看今天的时空</p></center>
+                        <center><p id ="data" >今天是&ensp;{{ date }}</p></center>
+                        <!--<button type="button" class="btn btn-default" aria-label="Left Align" id = "left" ><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+                        <button type="button" class="btn btn-default" aria-label="Left Align" id = "right"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>-->
+                    </div>
+
+                    <div class="modal-body">
+                        <img src = "{% static "pic/report.png" %}" class = "img-responsive" id = "back">
+                        <p  class="form-control input"  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven">在{{ post_list.0.place }}&nbsp;{{ post_list.0.thing }}</p>
+                        <p  class="form-control input"  style ="font-size:1rem; width: 15%;display: inline-block;" id = "eleven">在{{ post_list.2.place }}&nbsp;{{ post_list.2.thing }}</p>
+                        <p  class="form-control input"  style ="font-size:1rem; width: 15%;display: inline-block;" id = "three">在{{ post_list.4.place }}&nbsp;{{ post_list.4.thing }}</p>
+                        <p  class="form-control input"  style ="font-size:1rem; width: 15%;display: inline-block;" id = "seven-p">在{{ post_list.5.place }}&nbsp;{{ post_list.5.thing }}</p>
+                        <p  class="form-control input1" style ="font-size:1rem; width: 15%;display: inline-block;" id = "nine">在{{ post_list.1.place }}&nbsp;{{ post_list.1.thing }}</p>
+                        <p  class="form-control input1" style ="font-size:1rem; width: 15%;display: inline-block;" id = "one">在{{ post_list.3.place }}&nbsp;{{ post_list.3.thing }}</p>
+                        <p  class="form-control input1" style ="font-size:1rem; width: 15%;display: inline-block;" id = "five">在{{ post_list.6.place }}&nbsp;{{ post_list.6.thing }}</p>
+                        <p  class="form-control input1" style ="font-size:1rem; width: 15%;display: inline-block;" id = "nine-p">在{{ post_list.7.place }}&nbsp;{{ post_list.7.thing }}</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                    <h5 class="center">用户体验d</h5>
-
-                    <p class="light">通过利用元素和素材设计的原则，我们创建一个框架，采用组件和动画，提供更多的方便给用户。此外，一个单一的底层响应系统在所有平台上允许一个更统一的用户体验。</p>
-                </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                    <h5 class="center">简单使用</h5>
-
-                    <p class="light">我们已经提供了详细的文档，以及特定的代码示例，以帮助新用户开始使用。我们也总是开放的反馈，并可以回答任何问题，用户可能有关于实现。</p>
-                </div>
-            </div>
         </div>
 
-    </div>
-</div>
+        <script>
+            $(function(){
+                $('#myModal').modal({
+                    show:true,
+                    backdrop:true
+                })
+            });
+        </script>
 
 
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background2.jpg" alt="Unsplashed background img 2"></div>
-</div>
-
-<div class="container">
-    <div class="section">
-
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>心灵鸡汤</h4>
-                <p class="left-align light">人心就像一个容器，装的快乐多了，烦恼自然就少；装的简单多了，纠结自然就少；装的满足多了，痛苦自然就少；装的理解多了，矛盾自然就少；装的宽容多了，仇恨自然就少。胸襟决定器量，境界决定高下。活着就是一种修行，修行就是修心。修得一颗平常心，无时不是快乐；修得一颗满足心，无处不是幸福。</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
-
-<div class="container">
-    <div class="section">
-
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>心灵鸡汤</h4>
-                <p class="left-align light">人心就像一个容器，装的快乐多了，烦恼自然就少；装的简单多了，纠结自然就少；装的满足多了，痛苦自然就少；装的理解多了，矛盾自然就少；装的宽容多了，仇恨自然就少。胸襟决定器量，境界决定高下。活着就是一种修行，修行就是修心。修得一颗平常心，无时不是快乐；修得一颗满足心，无处不是幸福。</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
-
-<div class="container">
-    <div class="section">
-
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>心灵鸡汤</h4>
-                <p class="left-align light">人心就像一个容器，装的快乐多了，烦恼自然就少；装的简单多了，纠结自然就少；装的满足多了，痛苦自然就少；装的理解多了，矛盾自然就少；装的宽容多了，仇恨自然就少。胸襟决定器量，境界决定高下。活着就是一种修行，修行就是修心。修得一颗平常心，无时不是快乐；修得一颗满足心，无处不是幸福。</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
-
-<div class="container">
-    <div class="section">
-
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>心灵鸡汤</h4>
-                <p class="left-align light">人心就像一个容器，装的快乐多了，烦恼自然就少；装的简单多了，纠结自然就少；装的满足多了，痛苦自然就少；装的理解多了，矛盾自然就少；装的宽容多了，仇恨自然就少。胸襟决定器量，境界决定高下。活着就是一种修行，修行就是修心。修得一颗平常心，无时不是快乐；修得一颗满足心，无处不是幸福。</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
-
-<div class="container">
-    <div class="section">
-
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>心灵鸡汤</h4>
-                <p class="left-align light">人心就像一个容器，装的快乐多了，烦恼自然就少；装的简单多了，纠结自然就少；装的满足多了，痛苦自然就少；装的理解多了，矛盾自然就少；装的宽容多了，仇恨自然就少。胸襟决定器量，境界决定高下。活着就是一种修行，修行就是修心。修得一颗平常心，无时不是快乐；修得一颗满足心，无处不是幸福。</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
-
-<div class="container">
-    <div class="section">
-
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>心灵鸡汤</h4>
-                <p class="left-align light">人心就像一个容器，装的快乐多了，烦恼自然就少；装的简单多了，纠结自然就少；装的满足多了，痛苦自然就少；装的理解多了，矛盾自然就少；装的宽容多了，仇恨自然就少。胸襟决定器量，境界决定高下。活着就是一种修行，修行就是修心。修得一颗平常心，无时不是快乐；修得一颗满足心，无处不是幸福。</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">基于Material Design的主流前端响应式框架</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="pic/background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
-
-
-
-<footer class="page-footer teal">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">我们的团队</h5>
-                <p class="grey-text text-lighten-4">我们是一个在这个项目上工作的大学生团队，就像是我们的全职工作。任何金额将有助于支持和继续在这个项目上的发展，并不胜感激。</p>
-
-
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">设置</h5>
-                <ul>
-                    <li><a class="white-text" href="#!">链接 1</a></li>
-                    <li><a class="white-text" href="#!">链接 2</a></li>
-                    <li><a class="white-text" href="#!">链接 3</a></li>
-                    <li><a class="white-text" href="#!">链接 4</a></li>
-                </ul>
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">联系</h5>
-                <ul>
-                    <li><a class="white-text" href="#!">链接 1</a></li>
-                    <li><a class="white-text" href="#!">链接 2</a></li>
-                    <li><a class="white-text" href="#!">链接 3</a></li>
-                    <li><a class="white-text" href="#!">链接 4</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            Made by <a class="brown-text text-lighten-3" href="http://www.materializecss.cn">Materialize</a>
-        </div>
-    </div>
-</footer>
-
-
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script>
-    (function($){
-        $(function(){
-
-            $('.button-collapse').sideNav();
-            $('.parallax').parallax();
-
-        }); // end of document ready
-    })(jQuery); // end of jQuery name space
-</script>
 
 </body>
 </html>
