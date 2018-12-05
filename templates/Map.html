@@ -20,8 +20,6 @@
     <link href="{% static "css/materialize.min.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="{% static "css/styleOfframe.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
 
-
-
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -82,11 +80,11 @@
         <img src = "{% static "pic/icon/lake.png" %}" class = "icon" id = "星湖"  data-toggle="modal" data-target="#myModal10" name = "12" onclick="getplace(this.id);getlist(this.id);">
         <img src = "{% static "pic/icon/youyi.png" %}" class = "icon" id = "友谊广场" data-toggle="modal" data-target="#myModal11" name = "13" onclick="getplace(this.id);getlist(this.id);">
         <img src = "{% static "pic/icon/pool.png" %}" class = "icon" id = "游泳池" data-toggle="modal" data-target="#myModal12" name = "15" onclick="getlist(this.name);" >
-
     </div>
 
 </div>
 
+<!--提交成功提示-->
 {% if messages %}
 <div class="modal fade" id="myModal76" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -100,146 +98,149 @@
                 <center><p>{{message }}</p></center>
                 {% endfor %}
             </div>
+        </div>
+    </div>
+</div>
             {% endif %}
 
-            <!--此为模态框-->
+<!--此为模态框-引导-->
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>欢迎体验时空珞珈</h4>
+        <p>点击地标，记录您在哪、做什么，创建您自己的个性化体验</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">关闭</a>
+    </div>
+</div>
 
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <h4>欢迎体验时空珞珈</h4>
-                    <p>点击地标，记录您在哪、做什么，创建您自己的个性化体验</p>
+
+
+<!--此为模态框-添加页面-->
+{% for i in a %}
+<div class="place modal" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style = "position: absolute">
+        <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style = "background-color: transparent;border:0;font-size:1.3rem;"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">记录</h4>
+                <div id = "place">
+                    <p>今天的日期是{{ date }}</p>
+                    <p>你在 <span id="id" >{{ i.place }}</span></p>
                 </div>
-                <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">关闭</a>
-                </div>
+
+        <script type="text/javascript">
+            function getplace(name) {
+                var data = {a:1};
+                data.a = name;
+                var place = new Vue({
+                    el: '#place',
+                    data: data
+                })
+            }
+        </script>
+
+        <form action="/map/" method="post">
+            {% csrf_token %}
+            <div class = "form-group">
+                <label style = "display: block"><!--地点-->
+                    <select class = "selectpicker show-tick form-control" name="place">
+                        <option id="place" value = {{ i.place }}>{{ i.place }}</option>
+                    </select>
+                </label>
+
+                <label style = "display: block">现在的时间是（自动获取）<!--时间框-->
+                <select class = "selectpicker show-tick form-control select" name="time">
+                    <option id="time" value = {{ time }}>{{ time }}</option>
+                </select>
+            </label>
+                <label class = "control-label" style = "display: block">你在做什么？（请选择）</label>
+                <label style = "display: block"><!--事件选择框-->
+                    <select class = "selectpicker show-tick form-control" name="thing">
+                        {% for j in i.option %}
+                        <option id="thing" value = {{ j }}>{{ j }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
+                <p>
+                <center><label><!--想法输入框-->
+                    <input name="thought" type="text" placeholder="与大家分享你在想什么" required>
+                </label></center>
+                </p>
+                <center><button style = "margin:5%;" class = "btn btn-default" type="submit">分享</button></center>
+
+                <!--提交成功后弹出成功窗口？？？？-->
             </div>
+        </form>
+        </div>
+</div>
+
+{% endfor %}
 
 
 
-            <!--此为模态框-->
-            {% for i in a %}
-            <div class="place modal" id="myModal{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style = "position: absolute">
-                    <div class="modal-content">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style = "background-color: transparent;border:0;font-size:1.3rem;"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">记录</h4>
-                            <div id = "place">
-                                <p>今天的日期是{{ date }}</p>
-                                <p>你在 <span id="id" >{{ i.place }}</span></p>
-                            </div>
 
-                            <script type="text/javascript">
-                                function getplace(name) {
-                                    var data = {a:1};
-                                    data.a = name;
-                                    var place = new Vue({
-                                        el: '#place',
-                                        data: data
-                                    })
-                                }
-                            </script>
 
-                            <form action="/map/" method="post">
-                                {% csrf_token %}
-                                <div class = "form-group">
-                                    <label style = "display: block"><!--地点-->
-                                        <select class = "selectpicker show-tick form-control" name="place">
-                                            <option id="place" value = {{ i.place }}>{{ i.place }}</option>
-                                        </select>
-                                    </label>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
 
-                                    <label style = "display: block">现在的时间是（自动获取）<!--时间框-->
-                                    <select class = "selectpicker show-tick form-control select" name="time">
-                                        <option id="time" value = {{ time }}>{{ time }}</option>
-                                    </select>
-                                </label>
-                                    <label class = "control-label" style = "display: block">你在做什么？（请选择）</label>
-                                    <label style = "display: block"><!--事件选择框-->
-                                        <select class = "selectpicker show-tick form-control" name="thing">
-                                            {% for j in i.option %}
-                                            <option id="thing" value = {{ j }}>{{ j }}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </label>
-                                    <p>
-                                    <center><label><!--想法输入框-->
-                                        <input name="thought" type="text" placeholder="与大家分享你在想什么" required>
-                                    </label></center>
-                                    </p>
-                                    <center><button style = "margin:5%;" class = "btn btn-default" type="submit">分享</button></center>
+<script>
+    (function($){
+        $(function(){
 
-                                    <!--提交成功后弹出成功窗口？？？？-->
-                                </div>
-                            </form>
-                    </div>
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+    $(document).ready(function(){
+        // .modal-trigger类所在的a标签的href属性必须制定模态框的id才能被触发。
+        $('.modal').modal({
+            dismissible: false, // 点击模态外面模态消失关闭
+            opacity: .5, // 相对于背景的不透明度
+            in_duration: 300, // 显示特效的时间
+            out_duration: 200, // 消失特效时间
+            starting_top: '4%', // 启动时的样式属性
+            ending_top: '10%', // 结束时的样式属性
+
+        });
+        $('.open').on('click', function() {
+            $('#modal1').modal('open');
+        });
+        $('.close').on('click', function() {
+            $('#modal2').modal('close');
+        });
+        <!--初始化下拉菜单-->
+        $(document).ready(function() {
+
+            $('select').material_select();
+
+        });
+        <!--禁用拖动条-->
+        $(".modal").css({
+            "overflow-x":"hidden",
+            "overflow-y":"hidden"
+        });
+    });
+</script>
+
+<!--底部栏-->
+<footer class="page-footer teal" style = "float: bottom;position: relative;">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">时空珞珈</h5>
+                <p class="grey-text text-lighten-4">关于“珞珈印象”这么一个主题，我们思考了很久：在视觉上经典的绿瓦和牌坊，象征中不变的樱花和东湖水之外，珞珈给予我们的、我们留在珞珈的，究竟是什么？
+                    这一次的网页设计就代表了我们的答案——我们在珞珈的时光</p>
             </div>
-            {% endfor %}
-
-
-
-
-
-            <!--  Scripts-->
-            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-            <script src="{% static 'js/materialize.js' %}"></script>
-
-            <script>
-                (function($){
-                    $(function(){
-
-                        $('.button-collapse').sideNav();
-                        $('.parallax').parallax();
-
-                    }); // end of document ready
-                })(jQuery); // end of jQuery name space
-                $(document).ready(function(){
-                    // .modal-trigger类所在的a标签的href属性必须制定模态框的id才能被触发。
-                    $('.modal').modal({
-                        dismissible: false, // 点击模态外面模态消失关闭
-                        opacity: .5, // 相对于背景的不透明度
-                        in_duration: 300, // 显示特效的时间
-                        out_duration: 200, // 消失特效时间
-                        starting_top: '4%', // 启动时的样式属性
-                        ending_top: '10%', // 结束时的样式属性
-
-                    });
-                    $('.open').on('click', function() {
-                        $('#modal1').modal('open');
-                    });
-                    $('.close').on('click', function() {
-                        $('#modal2').modal('close');
-                    });
-                    <!--初始化下拉菜单-->
-                    $(document).ready(function() {
-
-                        $('select').material_select();
-
-                    });
-                    <!--禁用拖动条-->
-                    $(".modal").css({
-                        "overflow-x":"hidden",
-                        "overflow-y":"hidden"
-                    });
-                });
-            </script>
-
-            <!--底部栏-->
-            <footer class="page-footer teal" style = "float: bottom;position: relative;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col l6 s12">
-                            <h5 class="white-text">时空珞珈</h5>
-                            <p class="grey-text text-lighten-4">关于“珞珈印象”这么一个主题，我们思考了很久：在视觉上经典的绿瓦和牌坊，象征中不变的樱花和东湖水之外，珞珈给予我们的、我们留在珞珈的，究竟是什么？
-                                这一次的网页设计就代表了我们的答案——我们在珞珈的时光</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-copyright">
-                    <div class="container">
-                        Made by <h5 style = "display: inline-block;">编程哲学</h5>
-                    </div>
-                </div>
-            </footer>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <h5 style = "display: inline-block;">编程哲学</h5>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

@@ -1,128 +1,320 @@
-<!DOCTYPE>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>时空珞珈——印记</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>时空珞珈——记录</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static "css/styleOfLine.css" %}">
+
+    <!--js-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="{% static "css/styleOfMap.css" %}">
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway'>
-    <!--引用vuejs-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> 
 
-    <!--Jquery-->
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-
-    <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
-
-
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static "css/materialize.min.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{% static "css/styleOfframe.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!--顶栏-->
-    <div class = "container-fluid">
-        <div class = "row" id = "header">   
-            <a href = "/index/"><span class = "col-md-1" style = "padding: 0;"><img src = "{% static "pic/picOfMap/blue square.png" %}" id = "square"></span></a>
-            <span class = "option col-md-5" id = "Map"><p id = "fir" style = "display: inline-block;margin: 0;">{{ hello }} ，小王</p></span>
+
+<!--顶部导航栏-->
+<div class =  "navbar-fixed">
+    <nav class="blue" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home" style = "display:inline-block;"></li>
+                <li><a href = "/map/">记录</a></li>
+                <li><img class = "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></li>
+                <li><a href = "/line/">印记</a></li>
+                <li><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></li>
+                <li><a href = "/timeline/">今天</a></li>
+                <li><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></li>
+                <li><a href = "/infoflow/">发现</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href = "/map/">记录</a></li>
+                <li><a href = "/line/"印记</a></li>
+                <li><a href = "/timeline/">今天</a></li>
+                <li><a href = "/infoflow/">发现</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+
+<!--视差图样和分界-->
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">印记</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">这是属于你自己的独特轨迹，它基于数据统计，反映了你在珞珈留下的最多的印记。</h5>
+            </div>
+            <br><br>
+
         </div>
     </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/background1.jpg" %}" alt="Unsplashed background img 1"></div>
+</div>
 
-    <!--左边菜单栏-->
-    <div style = "position: absolute;" id = "menu">
-        <center><a href = "/map/"><img class = "item" src = "{% static "pic/picOfMap/home.png" %}" id = "home"></a></center>
-        <center><a href = "/line/"><img class  "item" src = "{% static "pic/picOfMap/Line.png" %}" id = "Line"></a></center>
-        <center><a href = "/timeline/"><img class = "item" src = "{% static "pic/picOfMap/light.png" %}" id = "Time-line"></a></center>
-        <center><a href = "/infoflow"><img class = "item" src = "{% static "pic/picOfMap/info.png" %}" id = "info flow"></a></center>
-        <!--该函数为根据页面变换菜单图标的函数-->
-                <!--该函数为根据页面变换菜单图标的函数-->
-        <script type="text/javascript">
-            window.onload = function change1() {
-                $(document).ready(function(){
-                    $("#menu").fadeIn(3000);
-                });
-                if(document.title === "时空珞珈——印记") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line-v.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——记录") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home-v.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light.png" %}";
-                    document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——今天") {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
-                   document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-                if(document.title === "时空珞珈——发现")  {
-                    document.getElementById("Line").src = "{% static "pic/picOfMap/Line.png" %}";
-                    document.getElementById("home").src = "{% static "pic/picOfMap/home.png" %}";
-                    document.getElementById("light").src = "{% static "pic/picOfMap/light-v.png" %}";
-                   document.getElementById("info flow").src = "{% static "pic/picOfMap/info.png" %}";
-                }
-        }
-            
-        </script>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>{{ places.0 }}</h4>
+                <p class="left-align light">&ensp;&ensp;&ensp;借着樱顶的第一抹阳光，你起床了。在早上，你最喜欢<I><U>在{{ places.0 }}{{ things.0 }}</U></I>，这可能是你最平常也是最阳光的早晨</p>
+            </div>
+        </div>
 
     </div>
-
-    <!--地图-->
-    <div>
-        <div class = "img-responsive" style = "position: absolute;">
-            <img src = "{% static "pic/picOfMap/map.png"%}" id = "background">
-        </div> 
-    
-<div>
-
-    <!--报告浮动窗口-->
-	<center>
-		<div id = "report">
-			<button  class = "btn btn-primary" data-toggle="modal" data-target="#myModal" id = "check-report">查看我的报告</button>
-		</div>
-	</center>
-
-	<!--此为模态框-->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class = "modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <center><h4 class="modal-title">印记</h4></center>
-                    <center><p>这是属于你自己的独特轨迹，它基于数据统计，反映了你在珞珈留下的最多的印记。</p></center>
-				</div>
-				<div class = "modal-body">
-
-					<p>&ensp;&ensp;&ensp;借着樱顶的第一抹阳光，你起床了。在早上，你最喜欢<I><U>在{{ places.0 }}{{ things.0 }}</U></I>，这可能是你最平常也是最阳光的早晨</p>
-                    <p>&ensp;&ensp;&ensp;早八到了，你要去上课还是干嘛呢？你用自己的行动表明：你很可能会<I><U>在{{ places.1 }}{{ things.1 }}</U></I>，真是个不错的选择啊！</p>
-                    <p>&ensp;&ensp;&ensp;下课了！你会选择找个地方吃饭，还是做别的事情呢？其实，这时候你往往会<I><U>在{{ places.2 }}{{ things.2 }}</U></I>，真是个狼火</p>
-                    <p>&ensp;&ensp;&ensp;一下午的整块时间，珞珈山的主人，你，将会在<I><U>{{ places.3 }}{{ things.3 }}</U></I>，是国家栋梁啊</p>
-                    <p>&ensp;&ensp;&ensp;傍晚，你会想做些什么好呢？数据告诉你，你喜欢<I><U>在{{ places.4 }}{{ things.4 }}</U></I>，真特别</p>
-                    <p>&ensp;&ensp;&ensp;大晚上的，做些什么好呢？是学习还是<I><U>在{{ places.5 }}{{ things.5 }}</U></I>，时间告诉你，你选择了后者</p>
-                    <p>&ensp;&ensp;&ensp;要睡觉了，你选择<I><U>在{{ places.6 }}{{ places.6 }}</U></I>来消磨这些时光，很多人和你一样</p>
-
-				</div>
+</div>
 
 
-		</div>
-	</div>
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>我</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/background2.jpg" %}" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>{{ places.1 }}</h4>
+                <p class="left-align light">&ensp;&ensp;&ensp;早八到了，你要去上课还是干嘛呢？你用自己的行动表明：你很可能会<I><U>在{{ places.1 }}{{ things.1 }}</U></I>，真是个不错的选择啊！</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>在</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/青楼.jpg" %}" alt="Unsplashed background img 3"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>{{ places.2 }}</h4>
+                <p class="left-align light">&ensp;&ensp;&ensp;下课了！你会选择找个地方吃饭，还是做别的事情呢？其实，这时候你往往会<I><U>在{{ places.2 }}{{ things.2 }}</U></I>，真是个狼火</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>珞</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/食堂.jpg" %}" alt="Unsplashed background img 3"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>{{ places.3 }}</h4>
+                <p class="left-align light">&ensp;&ensp;&ensp;一下午的整块时间，珞珈山的主人，你，将会在<I><U>{{ places.3 }}{{ things.3 }}</U></I>，是国家栋梁啊</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>珈</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/信操.jpg" %}" alt="Unsplashed background img 3"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>{{ places.4 }}</h4>
+                <p class="left-align light">&ensp;&ensp;&ensp;傍晚，你会想做些什么好呢？数据告诉你，你喜欢<I><U>在{{ places.4 }}{{ things.4 }}</U></I>，真特别</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>等</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/background3.jpg" %}" alt="Unsplashed background img 3"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>{{ places.5 }}</h4>
+                <p class="left-align light">&ensp;&ensp;&ensp;大晚上的，做些什么好呢？是学习还是<I><U>在{{ places.5 }}{{ things.5 }}</U></I>，时间告诉你，你选择了后者</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>你</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/信操.jpg" %}" alt="Unsplashed background img 3"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>{{ places.6 }}</h4>
+                <p class="left-align light">&ensp;&ensp;&ensp;要睡觉了，你选择<I><U>在{{ places.6 }}{{ thing.6 }}</U></I>来消磨这些时光，很多人和你一样</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h1>来</h1>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src = "{% static "pic/picOfLine/信操.jpg" %}" alt="Unsplashed background img 3"></div>
+</div>
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+
 <script>
+    (function($){
         $(function(){
-            $('#myModal').modal({
-            show:true,
-            backdrop:true
-            })
+
+            $('.button-collapse').sideNav();
+            $('.parallax').parallax();
+
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+    $(document).ready(function(){
+        // .modal-trigger类所在的a标签的href属性必须制定模态框的id才能被触发。
+        $('.modal').modal({
+            dismissible: false, // 点击模态外面模态消失关闭
+            opacity: .5, // 相对于背景的不透明度
+            in_duration: 300, // 显示特效的时间
+            out_duration: 200, // 消失特效时间
+            starting_top: '4%', // 启动时的样式属性
+            ending_top: '10%', // 结束时的样式属性
+
         });
-    </script>
+        $('.open').on('click', function() {
+            $('#modal1').modal('open');
+        });
+        $('.close').on('click', function() {
+            $('#modal2').modal('close');
+        });
+        <!--初始化下拉菜单-->
+        $(document).ready(function() {
+
+            $('select').material_select();
+
+        });
+        <!--禁用拖动条-->
+        $(".modal").css({
+            "overflow-x":"hidden",
+            "overflow-y":"hidden"
+        });
+    });
+</script>
+
+
+<!--底部栏-->
+<footer class="page-footer teal" style = "float: bottom;position: relative;">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">时空珞珈</h5>
+                <p class="grey-text text-lighten-4">关于“珞珈印象”这么一个主题，我们思考了很久：在视觉上经典的绿瓦和牌坊，象征中不变的樱花和东湖水之外，珞珈给予我们的、我们留在珞珈的，究竟是什么？
+                    这一次的网页设计就代表了我们的答案——我们在珞珈的时光</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <h5 style = "display: inline-block;">编程哲学</h5>
+        </div>
+    </div>
+</footer>
+
+</body>
 
 </html>
